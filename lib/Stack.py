@@ -1,13 +1,17 @@
 class Stack:
 
     def __init__(self, items = [], limit = 100):
-        pass
+        self.items = items
+        self.limit = limit
 
     def isEmpty(self):
-        pass
+        return True if len(self.items) == 0 else False
 
     def push(self, item):
-        pass
+        if not self.full():
+            self.items.append(item)
+        else:
+            return None
 
     def pop(self):
         pass
